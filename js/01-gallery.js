@@ -3,9 +3,7 @@ import { galleryItems } from './gallery-items.js';
 
 console.log(galleryItems);
 
-console
 const gallery = document.querySelector(".gallery");
-console.log(basicLightbox);
 
 const markupGallery = createImgMarkup(galleryItems);
 
@@ -15,7 +13,7 @@ gallery.addEventListener(`click`, onClick);
 
 function createImgMarkup(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
-    return `
+        return `
     <div class="gallery__item">
 <a class="gallery__link" href="${original}">
 <img
