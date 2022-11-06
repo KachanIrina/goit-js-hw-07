@@ -9,8 +9,6 @@ const markupGallery = createImgMarkup(galleryItems);
 
 gallery.innerHTML = markupGallery;
 
-gallery.addEventListener(`click`, onClick);
-
 function createImgMarkup(galleryItems) {
     return galleryItems.map(({ preview, original, description }) => {
         return `
@@ -22,17 +20,6 @@ function createImgMarkup(galleryItems) {
 
 }
 
-console.log(createImgMarkup)
-
-console.log(SimpleLightbox)
-
-function onClick (evt) {
-    evt.preventDefault();
-
-    if(evt.target.nodeName !== `IMG`){
-        return;
-        }
-
 new SimpleLightbox('.gallery a', {
   captions:	true,
   captionSelector:`img`,
@@ -42,4 +29,3 @@ new SimpleLightbox('.gallery a', {
   captionDelay: 250,
  });
 
-}
